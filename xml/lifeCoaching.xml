@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="display.xsl"?>
+
+<!--Title: lifeCoaching.xml                     -->
+<!--Author: Cam Le Messurier                -->
+<!--StdNo: 3301398                          -->
+
+<!DOCTYPE businesses [
+    <!ELEMENT businesses (business+)>
+      <!ELEMENT business (name, logo?, picture+, url, address, phoneNumber+, hoursOfOperation?, inHomeService, businessDescription?, yearFounded?, award* , review*)>
+      <!ATTLIST business businessID ID #REQUIRED>
+      <!ATTLIST business businessType (lifeCoaching | remedialMassage) "lifeCoaching">
+
+        <!ELEMENT name (#PCDATA)>
+        <!ATTLIST name type (sole | partner | company) "sole">
+
+        <!ELEMENT logo (#PCDATA)>
+
+        <!ELEMENT picture (#PCDATA)>
+
+        <!ELEMENT url (#PCDATA)>
+
+        <!ELEMENT address (#PCDATA)>
+
+        <!ELEMENT phoneNumber (#PCDATA)>
+        <!ATTLIST phoneNumber type (personal|work) "work">
+
+        <!ELEMENT hoursOfOperation (time, day)>
+
+                <!ELEMENT time (open, close)>
+
+                    <!ELEMENT open (#PCDATA)>
+
+                    <!ELEMENT close (#PCDATA)>
+
+                <!ELEMENT day (open, close)>
+
+                    <!ELEMENT open (#PCDATA)>
+
+                    <!ELEMENT close (#PCDATA)>
+
+        <!ELEMENT inHomeService (minimumPrice, hourlyPrice)>
+
+            <!ELEMENT minumPrice (#PCDATA)>
+
+            <!ELEMENT hourlyPrice (#PCDATA)>
+
+        <!ELEMENT businessDescription (#PCDATA)>
+
+        <!ELEMENT yearFounded (#PCDATA)>
+
+        <!ELEMENT awards (#PCDATA)>
+
+        <!ELEMENT review (#PCDATA)>
+
+
+    <!ENTITY company "PTY LTD">
+]>
+
+<businesses>
+      <business businessID="0000000001" businessType="lifeCoaching">
+            <name type="&company;">LifeCoaching4U</name>
+            <picture>pictures/stockPhoto.jpg</picture>
+            <picture>pictures/stockPhoto.jpg</picture>
+            <url>lifecoaching4u.com.au</url>
+            <address>130 West Street, Callaghan NSW 2308</address>
+            <logo>logos/stockLogo.png</logo>
+            <phoneNumber>04385327567</phoneNumber>
+            <hoursOfOperation>
+                  <time>
+                        <open>9AM</open>
+                        <close>5PM</close>
+                  </time>
+                  <day>
+                        <open>Mon</open>
+                        <close>Fri</close>
+                  </day>
+            </hoursOfOperation>
+            <inHomeService>
+                  <minimumPrice>$10</minimumPrice>
+                  <hourlyPrice>$10</hourlyPrice>
+            </inHomeService>
+            <businessDescription>Specialises in celebrities</businessDescription>
+            <yearFounded>2009</yearFounded>
+            <award>Business of the Year 2011, Callaghan</award>
+            <review>3/5</review>
+            <review>5/5</review>
+      </business>
+
+      <business businessID="0000000002" businessType="lifeCoaching">
+            <name type="&company;">Callghan Coaches</name>
+            <picture>pictures/stockPhoto.jpg</picture>
+            <url>callaghancoaches.com</url>
+            <address>130 South Street, Sydney NSW 2540</address>
+            <phoneNumber type="personal">04344327567</phoneNumber>
+            <hoursOfOperation>
+                  <time>
+                        <open>9AM</open>
+                        <close>5PM</close>
+                  </time>
+                  <day>
+                        <open>Mon</open>
+                        <close>Sun</close>
+                  </day>
+            </hoursOfOperation>
+            <inHomeService>
+                  <minimumPrice>$1000</minimumPrice>
+                  <hourlyPrice>$600</hourlyPrice>
+            </inHomeService>
+            <businessDescription>Specialises in making you insta famous</businessDescription>
+            <yearFounded>2002</yearFounded>
+      </business>
+
+      <business businessID="0000000003" businessType="lifeCoaching">
+            <name>Liam's Lesson Learning </name>
+            <picture>pictures/stockPhoto.jpg</picture>
+            <url>liam.wordpress.com</url>
+            <address>130 North Street, Mereweather NSW 4890</address>
+            <phoneNumber>4444444467</phoneNumber>
+            <hoursOfOperation>
+                  <time>
+                        <open>10AM</open>
+                        <close>1PM</close>
+                  </time>
+                  <day>
+                        <open>Mon</open>
+                        <close>Tues</close>
+                  </day>
+            </hoursOfOperation>
+            <inHomeService>
+                  <minimumPrice>$1099</minimumPrice>
+                  <hourlyPrice>$1022</hourlyPrice>
+            </inHomeService>
+            <businessDescription></businessDescription>
+            <yearFounded>2009</yearFounded>
+            <review> 5/5</review>
+            <review> 5/5</review>
+            <review> 5/5</review>
+            <review> 5/5</review>
+      </business>
+
+
+</businesses>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Title: template.xml                      -->
+<!--Author: Cam Le Messurier                -->
+<!--StdNo: 3301398                          -->
+
+
+<!DOCTYPE businesses [
+    <!ELEMENT businesses (business+)>
+      <!ELEMENT business (name, logo?, picture+, url, address, phoneNumber+, hoursOfOperation?, inHomeService, businessDescription?, yearFounded?, award* , review*)>
+      <!ATTLIST business businessID ID #REQUIRED>
+
+        <!ELEMENT name (#PCDATA)>
+        <!ATTLIST name type (sole | partner | company) "sole">
+
+        <!ELEMENT logo (#PCDATA)>
+
+        <!ELEMENT picture (#PCDATA)>
+
+        <!ELEMENT url (#PCDATA)>
+
+        <!ELEMENT address (#PCDATA)>
+
+        <!ELEMENT phoneNumber (#PCDATA)>
+        <!ATTLIST phoneNumber type (personal|work) "work">
+
+        <!ELEMENT hoursOfOperation (time, day)>
+
+                <!ELEMENT time (open, close)>
+
+                    <!ELEMENT open (#PCDATA)>
+
+                    <!ELEMENT close (#PCDATA)>
+
+                <!ELEMENT day (open, close)>
+
+                    <!ELEMENT open (#PCDATA)>
+
+                    <!ELEMENT close (#PCDATA)>
+
+        <!ELEMENT inHomeService (minimumPrice, hourlyPrice)>
+
+            <!ELEMENT minumPrice (#PCDATA)>
+
+            <!ELEMENT hourlyPrice (#PCDATA)>
+
+        <!ELEMENT businessDescription (#PCDATA)>
+
+        <!ELEMENT yearFounded (#PCDATA)>
+
+        <!ELEMENT awards (#PCDATA)>
+
+        <!ELEMENT review (#PCDATA)>
+
+
+    <!ENTITY company "PTY LTD">
+]>
+
+<business businessID="0000000001" >
+      <name></name>
+      <logo></logo>
+      <picture></picture>
+      <url></url>
+      <address></address>
+      <phoneNumber></phoneNumber>
+      <hoursOfOperatino>
+            <time>
+                  <open></open>
+                  <close></close>
+            </time>
+            <day>
+                  <open></open>
+                  <close></close>
+            </day>
+      </hoursOfOperatino>
+      <inHomeService>
+            <minimumPrice></minimumPrice>
+            <hourlyPrice></hourlyPrice>
+      </inHomeService>
+      <businessDescription></businessDescription>
+      <yearFounded></yearFounded>
+      <award></award>
+      <review></review>
+</business>
